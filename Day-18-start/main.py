@@ -1,17 +1,23 @@
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
+#
+# # Getting hold of the turtle class
+# tim = Turtle()
+# tim.shape("turtle")
+# tim.color("navy")
+# # timmy.forward(10)
+#
+# # Challenge-1: Draw a square
+# for turtle in range(4):
+#     tim.forward(100)
+#     tim.right(90)
 
-# Getting hold of the turtle class
-timmy = Turtle()
-timmy.shape("turtle")
-timmy.color("navy")
-# timmy.forward(10)
+# How to alias module
 
-# Challenge-1: Draw a square
-for turtle in range(4):
-    timmy.forward(100)
-    timmy.right(90)
+import turtle as t
 
-
+# What it does is whenever you write a turtle you just have to write t
+# Sometimes there are modules which have very long name so this method works just fine for it
+tim = t.Turtle()
 
 
 
