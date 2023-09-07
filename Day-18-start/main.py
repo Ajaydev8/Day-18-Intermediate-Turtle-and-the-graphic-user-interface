@@ -4,10 +4,12 @@ from turtle import Turtle, Screen
 timmy = Turtle()
 timmy.shape("turtle")
 timmy.color("navy")
-timmy.forward(10)
+# timmy.forward(10)
 
-
-
+# Challenge-1: Draw a square
+for turtle in range(4):
+    timmy.forward(100)
+    timmy.right(90)
 
 
 
