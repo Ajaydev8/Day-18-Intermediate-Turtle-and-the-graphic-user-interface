@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 
 # Getting hold of the turtle class
 tim = Turtle()
-tim.shape("turtle")
+# tim.shape("turtle")
 tim.color("navy")
 # timmy.forward(10)
 
@@ -21,18 +21,34 @@ tim.color("navy")
 
 
 # Challenge-3: Draw different shapes
-turtle_colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "black", "navy blue"]
+turtle_colors = ["#FF6B6B", "#6BFF6B", "#6B6BFF", "#FFD700", "#FF69B4", "#BA55D3", "#87CEEB", "#F08080", "#20B2AA", "#FFA07A"]
 
-for x in range(3, 10):
-    color = turtle_colors[x]
-    length = 100
-    angle = 360
-    goal = x
-    while goal != 0:
-        tim.color(color)
-        tim.forward(length)
-        tim.right(360/x)
-        goal -= 1
+# for x in range(3, 10):
+#     color = turtle_colors[x]
+#     length = 100
+#     angle = 360
+#     goal = x
+#     while goal != 0:
+#         tim.color(color)
+#         tim.forward(length)
+#         tim.right(360/x)
+#         goal -= 1
+
+# Challenge 4: Draw a random walk.
+import random
+is_on = True
+random_list = [20, -20]
+angle = [90, 180, 270, 360]
+
+while is_on:
+    tim.speed("fastest")
+    random_number = random.choice(random_list)
+    random_color = random.choice(turtle_colors)
+    random_angle = random.choice(angle)
+    tim.width(10)
+    tim.setheading(random_angle)
+    tim.color(random_color)
+    tim.forward(random_number)
 
 
 # How to alias module
