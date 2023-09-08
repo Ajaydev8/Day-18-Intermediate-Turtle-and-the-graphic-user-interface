@@ -13,11 +13,26 @@ tim.color("navy")
 
 
 # Challenge-2: Draw dashed lines
-for _ in range(15):
-    tim.forward(10)
-    tim.penup()
-    tim.forward(10)
-    tim.pendown()
+# for _ in range(15):
+#     tim.forward(10)
+#     tim.penup()
+#     tim.forward(10)
+#     tim.pendown()
+
+
+# Challenge-3: Draw different shapes
+turtle_colors = ["red", "green", "blue", "yellow", "orange", "purple", "pink", "brown", "black", "navy blue"]
+
+for x in range(3, 10):
+    color = turtle_colors[x]
+    length = 100
+    angle = 360
+    goal = x
+    while goal != 0:
+        tim.color(color)
+        tim.forward(length)
+        tim.right(360/x)
+        goal -= 1
 
 
 # How to alias module
