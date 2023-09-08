@@ -44,18 +44,18 @@ def random_color():
 
 # Challenge 4: Draw a random walk.
 
-# is_on = True
-# random_list = [20, -20]
-# angle = [90, 180, 270, 360]
-#
-# while is_on:
-#     tim.speed("fastest")
-#     random_number = random.choice(random_list)
-#     random_angle = random.choice(angle)
-#     tim.width(10)
-#     tim.setheading(random_angle)
-#     tim.color(random_color())
-#     tim.forward(random_number)
+is_on = True
+random_list = [20, -20]
+angle = [90, 180, 270, 360]
+
+while is_on:
+    tim.speed("fastest")
+    random_number = random.choice(random_list)
+    random_angle = random.choice(angle)
+    tim.width(10)
+    tim.setheading(random_angle)
+    tim.color(random_color())
+    tim.forward(random_number)
 
 
 
