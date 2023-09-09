@@ -25,15 +25,25 @@ rgb_colors = [(236, 244, 244), (236, 224, 224), (197, 7, 7), (195, 164, 164), (2
 def rgb_to_hex(rgb):
     return "#{:02x}{:02x}{:02x}".format(rgb[0], rgb[1], rgb[2])
 
-tim.penup()
-tim.goto(-250, -250)
-tim.speed("fastest")
 
-for _ in range(10):
-    random_rgb_color = random.choice(rgb_colors)
-    hex_color = rgb_to_hex(random_rgb_color)  # Convert RGB to Hex
-    tim.color(hex_color)
-    tim.dot(20)
-    tim.forward(50)
+goal = 10
+initial_x = -250
+initial_y = -260
+
+while goal != 0:
+    tim.penup()
+    new_initial_y = initial_y + 50
+    tim.goto(initial_x, new_initial_y)
+    goal -= 1
+    for _ in range(10):
+        random_rgb_color = random.choice(rgb_colors)
+        hex_color = rgb_to_hex(random_rgb_color)  # Convert RGB to Hex
+        tim.color(hex_color)
+        tim.dot(20)
+        tim.forward(50)
+    initial_y = new_initial_y
+
+
+
 
 screen.exitonclick()
